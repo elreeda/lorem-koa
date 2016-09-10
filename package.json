@@ -1,7 +1,8 @@
 {
-  "name": "Init-project",
+  "name": "lorem-koa",
   "version": "1.0.0",
   "description": "",
+  "private": true,
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
@@ -12,7 +13,10 @@
   "license": "ISC",
   "dependencies": {
     "koa": "^1.2.2",
-    "koa-router": "^5.4.0"
+    "koa-bodyparser": "^2.2.0",
+    "koa-mongoose": "^1.0.9",
+    "koa-router": "^5.4.0",
+    "mongoose": "^4.6.0"
   },
   "devDependencies": {
     "mocha": "^3.0.2",

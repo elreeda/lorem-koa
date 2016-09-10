@@ -1,12 +1,10 @@
-const IndexControllers = require('../controllers/IndexControllers')
+const UserControllers = require('../controllers/UserControllers')
 
 module.exports = (router) => {
   router
-    .get('/one', function *(next) {
-      this.body = 'one'
-    })
-    .get('/two', function *(next) {
-      this.body = 'two'
-    })
-    .get('/test', IndexControllers.index)
+    .get('/users', UserControllers.findAll)
+    .get('/users/:username', UserControllers.findOne)
+    .post('/users', UserControllers.create)
+    .put('/users/:username', UserControllers.update)
+    .delete('/users/:username', UserControllers.delete)
 }
