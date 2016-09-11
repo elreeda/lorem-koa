@@ -1,5 +1,3 @@
-const User = require('../models/User')
-
 module.exports = {
   findAll: function *(next) {
     try {
@@ -43,7 +41,6 @@ module.exports = {
         this.status = 500
         this.body = {status: 'error', message: 'Something went wrong.'}
       }
-
     }
   },
   update: function *(next) {
