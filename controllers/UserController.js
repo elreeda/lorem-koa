@@ -1,3 +1,5 @@
+const User = require('../models/User')
+
 module.exports = {
   findAll: function *(next) {
     try {

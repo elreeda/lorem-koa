@@ -1,13 +1,11 @@
 const koa = require('koa')
-const bodyParser = require('koa-bodyparser')
+var bodyParser = require('koa-bodyparser')
 const app = module.exports = koa()
 const router = require('koa-router')({prefix: '/api'})
-
 const db = require('./config/database')()
-const rush = require('./config/rush')
-// const routes = require('./routes/routes')
+const routes = require('./routes/routes')
 
-rush(router)
+routes(router)
 app.use(bodyParser())
 app.use(router.routes())
 app.use(router.allowedMethods())
