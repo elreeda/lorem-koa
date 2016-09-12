@@ -1,5 +1,5 @@
 const koa = require('koa')
-var bodyParser = require('koa-bodyparser')
+const bodyParser = require('koa-bodyparser')
 const app = module.exports = koa()
 const router = require('koa-router')({prefix: '/api'})
 const db = require('./config/database')()
